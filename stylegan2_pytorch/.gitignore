@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+results/
+D.pth
+G.pth
+Gs.pth
