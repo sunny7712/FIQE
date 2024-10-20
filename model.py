@@ -32,11 +32,11 @@ class PretrainedGenerator(nn.Module):
         args = argparse.Namespace(
             command='generate_images',
             batch_size=batch_size,
-            seeds=[seed + i for i in range(0, batch_size)],  # You can modify the seeds if you want to generate more images
-            network=model_path,  # Path to your trained model (ensure this is correct)
-            output='./results',  # Output folder where the generated images will be saved
-            pixel_min=pixel_min,        # Pixel normalization minimum
-            pixel_max=pixel_max,         # Pixel normalization maximum
+            seeds=[seed + i for i in range(0, batch_size)], 
+            network=model_path,  
+            output='./results',  
+            pixel_min=pixel_min,        
+            pixel_max=pixel_max,        
             gpu=[0],              # Use [] if you're not using a GPU, or specify your GPU ids if using one
             truncation_psi=truncation_psi   # Truncation trick parameter, useful for controlling diversity in GANs
         )
