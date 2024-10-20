@@ -1,3 +1,0 @@
-[submodule "minor_project/stylegan2_pytorch"]
-	path = minor_project/stylegan2_pytorch
-	url = https://github.com/adriansahlman/stylegan2_pytorch.git
