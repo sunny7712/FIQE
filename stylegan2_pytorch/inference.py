@@ -14,15 +14,15 @@ args = argparse.Namespace(
     command='generate_images',
     batch_size=4,
     seeds=[6000, 6001, 6002, 6003],  # You can modify the seeds if you want to generate more images
-    network='G.pth',  # Path to your trained model (ensure this is correct)
-    output='./results',  # Output folder where the generated images will be saved
+    network='stylegan2_pytorch/G.pth',  # Path to your trained model (ensure this is correct)
+    output='stylegan2_pytorch/results',  # Output folder where the generated images will be saved
     pixel_min=-1,        # Pixel normalization minimum
     pixel_max=1,         # Pixel normalization maximum
     gpu=[0],              # Use [] if you're not using a GPU, or specify your GPU ids if using one
     truncation_psi=0.5   # Truncation trick parameter, useful for controlling diversity in GANs
 )
 
-latent_size = 512  
+latent_size = 512
 latents = torch.randn((args.batch_size, latent_size))
 # print(latents.shape)
 

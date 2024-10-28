@@ -3,7 +3,7 @@ import torch
 import argparse
 import torch.nn as nn
 from stylegan2_pytorch.stylegan2.models import Discriminator
-from stylegan2_pytorch.stylegan2 import models 
+from stylegan2_pytorch.stylegan2 import models
 
 class ResnetEncoder(nn.Module):
     def __init__(self):
@@ -43,7 +43,7 @@ class PretrainedGenerator(nn.Module):
         
         self.G = models.load(args.network)
     
-    @torch.no_grad()
+    # @torch.no_grad()
     def forward(self, x):
         # x -> (batch, 512)
         x = self.G(x, labels = None)
