@@ -4,3 +4,5 @@ lq_train_images
 lq_test_images
 hq_train_images
 hq_test_images
+new_hq_train
+new_hq_test
